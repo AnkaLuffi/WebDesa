@@ -18,7 +18,19 @@ class FamilyMembers extends Model
         'date_of_birth',
         'occupation',
         'marital_status', 
+        'relation'
     ];
+
+    public function scopeSearch($query, $search)
+    {
+        return $query->whereHas('user', function ($query) use ($search) {
+            $query->where(function ($q) use ($search) {
+                $q->where('name', 'like', "%$search%")
+                    ->orWhere('email', 'like', "%$search%");
+            });
+        })->orWhere('phone_number', 'like', "%$search%")
+            ->orWhere('identify_number', 'like', "%$search%");
+    }
 
     public function headOfFamily()
     {
