@@ -19,7 +19,7 @@ class FamilyMemberFactory extends Factory
         return [
             'profile_picture' => $this->faker->imageUrl(),
             'identify_number' => $this->faker->unique()->numberBetween(10000000, 99999999),
-            'gender' => $this->faker->randomElement(['male','female']),
+            'gender' => $this->faker->randomElement(['male', 'female']),
             'date_of_birth' => $this->faker->dateTimeBetween('-60 years', 'now'),
             'phone_number' => $this->faker->unique()->phoneNumber(),
             'occupation' => $this->faker->jobTitle(),

@@ -6,7 +6,7 @@ use App\Traits\UUID;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class FamilyMembers extends Model
+class FamilyMember extends Model
 {
     use SoftDeletes, UUID;
 
@@ -17,7 +17,7 @@ class FamilyMembers extends Model
         'gender',
         'date_of_birth',
         'occupation',
-        'marital_status', 
+        'marital_status',
         'relation'
     ];
 

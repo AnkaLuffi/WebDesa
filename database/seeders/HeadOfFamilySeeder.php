@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\FamilyMembers;
+use App\Models\FamilyMember;
 use Database\Factories\FamilyMemberFactory;
 use Database\Factories\HeadOfFamilyFactory;
 use Database\Factories\UserFactory;
